@@ -6,7 +6,7 @@ O objetivo principal foi desenvolver minhas competências na criação de interf
 
 ##
 
-#Tecnologias utilizadas:
+# Tecnologias utilizadas:
 
 - HTML para estruturar a interface do usuário.
 - CSS para estilização personalizada e design atraente.
@@ -36,4 +36,4 @@ O objetivo principal foi desenvolver minhas competências na criação de interf
 
 ##
 
-Imagens do projeto:
+# Imagens do projeto:
