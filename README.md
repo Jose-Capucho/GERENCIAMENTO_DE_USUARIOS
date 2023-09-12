@@ -36,4 +36,6 @@ O objetivo principal foi desenvolver minhas competências na criação de interf
 
 ##
 
-# Imagens do projeto:
+# Imagem do projeto:
+
+![image](https://github.com/Jose-Capucho/GERENCIAMENTO_DE_USUARIOS/assets/97485966/c9ab747a-9556-4532-891b-940c0b7272ff)
