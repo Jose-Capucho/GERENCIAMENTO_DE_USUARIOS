@@ -17,29 +17,57 @@ class User {
      get register(){
         return this._register;
      }
+ 
+     set register(value){
+        this._register = value;
+     }
 
      get name(){
         return this._name;
+     }
+
+     set name(value){
+        this._name = value;
      }
 
      get gender(){
         return this._gender;
      }
 
+     set gender(value){
+        this._gender = value;
+     }
+
      get birth(){
         return this._birth;
+     }
+
+     set birth(value){
+        this._birth = value;
      }
 
      get country(){
         return this._country;
      }
 
+     set country(value){
+        this._country = value;
+     }
+
      get email(){
         return this._email;
      }
 
+     set email(value){
+        this._email = value;
+     }
+
      get password(){
         return this._password;
+     }
+
+     set password(value){
+        this._password = value;
      }
 
      get photo(){
@@ -52,6 +80,10 @@ class User {
 
      get admin(){
         return this._admin;
+     }
+
+     set admin(value){
+        this._admin = value;
      }
 
 }
