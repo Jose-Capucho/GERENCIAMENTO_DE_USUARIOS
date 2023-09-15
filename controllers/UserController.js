@@ -70,7 +70,6 @@ class UserController {
 
         });
 
-
     }
 
     onSubmit(){
@@ -143,7 +142,6 @@ class UserController {
                 resolve('dist/img/boxed-bg.jpg');
             } 
 
-
         });
 
     }
@@ -174,6 +172,7 @@ class UserController {
 
 
             } else {
+
                 user[field.name] = field.value; 
             
             }
@@ -297,7 +296,6 @@ class UserController {
                     }
 
                 }
-
 
             }
 

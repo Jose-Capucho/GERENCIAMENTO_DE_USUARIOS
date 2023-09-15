@@ -1,143 +1,142 @@
 class User {
 
-     constructor(name, gender, birth, country, email, password, photo, admin){
+   constructor(name, gender, birth, country, email, password, photo, admin){
 
-        this._id;       
-        this._name = name;
-        this._gender = gender;
-        this._birth = birth;
-        this._country = country;
-        this._email = email;
-        this._password = password;
-        this._photo = photo;
-        this._admin = admin;
-        this._register = new Date();
+      this._id;       
+      this._name = name;
+      this._gender = gender;
+      this._birth = birth;
+      this._country = country;
+      this._email = email;
+      this._password = password;
+      this._photo = photo;
+      this._admin = admin;
+      this._register = new Date();
 
-     }
+   }
 
-     get id(){
-         return this._id;
-     }
+   get id(){
+      return this._id;
+   }
 
-     get register(){
-        return this._register;
-     }
- 
-     set register(value){
-        this._register = value;
-     }
+   get register(){
+      return this._register;
+   }
 
-     get name(){
-        return this._name;
-     }
+   set register(value){
+      this._register = value;
+   }
 
-     set name(value){
-        this._name = value;
-     }
+   get name(){
+      return this._name;
+   }
 
-     get gender(){
-        return this._gender;
-     }
+   set name(value){
+      this._name = value;
+   }
 
-     set gender(value){
-        this._gender = value;
-     }
+   get gender(){
+      return this._gender;
+   }
 
-     get birth(){
-        return this._birth;
-     }
+   set gender(value){
+      this._gender = value;
+   }
 
-     set birth(value){
-        this._birth = value;
-     }
+   get birth(){
+      return this._birth;
+   }
 
-     get country(){
-        return this._country;
-     }
+   set birth(value){
+      this._birth = value;
+   }
 
-     set country(value){
-        this._country = value;
-     }
+   get country(){
+      return this._country;
+   }
 
-     get email(){
-        return this._email;
-     }
+   set country(value){
+      this._country = value;
+   }
 
-     set email(value){
-        this._email = value;
-     }
+   get email(){
+      return this._email;
+   }
 
-     get password(){
-        return this._password;
-     }
+   set email(value){
+      this._email = value;
+   }
 
-     set password(value){
-        this._password = value;
-     }
+   get password(){
+      return this._password;
+   }
 
-     get photo(){
-        return this._photo;
-     }
+   set password(value){
+      this._password = value;
+   }
 
-     set photo(value){
-        this._photo = value;
-     }
+   get photo(){
+      return this._photo;
+   }
 
-     get admin(){
-        return this._admin;
-     }
+   set photo(value){
+      this._photo = value;
+   }
 
-     set admin(value){
-        this._admin = value;
-     }
+   get admin(){
+      return this._admin;
+   }
 
-     loadFromJSON(json){
+   set admin(value){
+      this._admin = value;
+   }
 
-         for (let name in json) {
+   loadFromJSON(json){
 
-            switch(name) {
+      for (let name in json) {
 
-               case '_register':
-                  this[name] = new Date(json[name]);
-                  break;
-               default:
-                  this[name] = json[name];
-            }
+         switch(name) {
 
-            
+            case '_register':
+               this[name] = new Date(json[name]);
+               break;
+            default:
+               this[name] = json[name];
          }
+         
+      }
 
-     }
+   }
 
-     static getUsersStorage(){
+   static getUsersStorage(){
 
-         let users = [];
+      let users = [];
 
-         if (localStorage.getItem("users")) {
+      if (localStorage.getItem("users")) {
 
-            users = JSON.parse(localStorage.getItem("users"));
-
-         }
-
-         return users;
-
-      } 
-      
-      getNewId(){
-
-         let usersID = parseInt(localStorage.getItem("usersID"));
-
-        if(!usersID > 0) usersID = 0;
-
-         usersID++;
-
-         localStorage.setItem("usersID", usersID);
-
-         return usersID;
+         users = JSON.parse(localStorage.getItem("users"));
 
       }
 
-     save(){
+      return users;
+
+   } 
+      
+   getNewId(){
+
+      let usersID = parseInt(localStorage.getItem("usersID"));
+
+      if(!usersID > 0) usersID = 0;
+
+      usersID++;
+
+      localStorage.setItem("usersID", usersID);
+
+      return usersID;
+
+   }
+
+   save(){
 
       let users = User.getUsersStorage();
 
@@ -165,17 +164,17 @@ class User {
       
       localStorage.setItem("users", JSON.stringify(users));
 
-     }
+   }
 
-     remove(){
+   remove(){
 
-      let users = User.getUsersStorage();
+   let users = User.getUsersStorage();
 
       users.forEach((userData, index) => {
 
          if (this._id == userData._id) {
 
-             users.splice(index, 1);
+               users.splice(index, 1);
 
          }
 
@@ -183,6 +182,6 @@ class User {
 
       localStorage.setItem("users", JSON.stringify(users));
 
-     }
+   }
 
 }
